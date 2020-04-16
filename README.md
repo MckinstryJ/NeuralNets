@@ -1,5 +1,8 @@
 # NeuralNets
 Building a Neural Network library (+ examples) for a deeper understanding of these models.
+<br><br>
+Report:
+[Neural Network Family](https://docs.google.com/document/d/e/2PACX-1vTKz4J7AkP1unnvD3ivbfmJFpRxD_Ect2M7hJNugZ8qXj-S2sYpuoWDK90LgZoYP9uOt7we1S_w2CKC/pub).
 
 <ol>
   <li><b>Simple Linear Regression Model (SLR)</b></li>
