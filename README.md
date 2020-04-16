@@ -2,12 +2,12 @@
 Building a Neural Network library (+ examples) for a deeper understanding of these models.
 
 <ol>
-  <li>Simple Linear Regression Model (SLR)</li>
+  <li><b>Simple Linear Regression Model (SLR)<b></li>
   <ul>
     <li>via Least Squares</li>
     <li>via Iteratively</li>
   </ul>
-  <li>...next...Multi Linear Regression Model (MLR)</li>
+  <li>...next... <b>Multi Linear Regression Model (MLR)<b></li>
   <ul>
     <li>via Least Squares</li>
     <li>via Iteratively</li>
