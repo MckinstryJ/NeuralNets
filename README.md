@@ -12,7 +12,7 @@ Report:
   </ul>
   <li>...next... <b>Multi Linear Regression Model (MLR)</b></li>
   <ul>
-    <li>via Least Squares</li>
+    <li>via Matrix Algebra</li>
     <li>via Iteratively</li>
     <li>via Genetic Algorithm</li>
   </ul>
