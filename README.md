@@ -10,7 +10,13 @@ Report:
     <li>via Least Squares</li>
     <li>via Iteratively</li>
   </ul>
-  <li>...next... <b>Multi Linear Regression Model (MLR)</b></li>
+  <li><b>Multi Linear Regression Model (MLR)</b></li>
+  <ul>
+    <li>via Matrix Algebra</li>
+    <li>via Iteratively</li>
+    <li>via Genetic Algorithm</li>
+  </ul>
+  <li>...next...<b>Single Layer Perceptron (SLP)</b></li>
   <ul>
     <li>via Matrix Algebra</li>
     <li>via Iteratively</li>
