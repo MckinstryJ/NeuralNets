@@ -3,6 +3,9 @@ Building a Neural Network library (+ examples) for a deeper understanding of the
 <br><br>
 Report:
 [Neural Network Family](https://docs.google.com/document/d/e/2PACX-1vTKz4J7AkP1unnvD3ivbfmJFpRxD_Ect2M7hJNugZ8qXj-S2sYpuoWDK90LgZoYP9uOt7we1S_w2CKC/pub).
+<br>
+<br>
+*Note: Apporaches solved mostly with Python but some are solved with C++ as well.
 
 <ol>
   <li><b>Simple Linear Regression Model (SLR)</b></li>
