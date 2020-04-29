@@ -18,8 +18,8 @@ Report:
   </ul>
   <li>...next...<b>Single Layer Perceptron (SLP)</b></li>
   <ul>
-    <li>via Matrix Algebra</li>
+    <li>via Backpropagation</li>
     <li>via Iteratively</li>
-    <li>via Genetic Algorithm</li>
+    <li>via Swarm Optimization</li>
   </ul>
 </ol>
