@@ -141,7 +141,7 @@ if __name__ == "__main__":
     slp_iter.validate()
     slp_iter.gain_loss()
 
-    # TODO: Solving by Swarm Optimization
+    # Solving by Swarm Optimization
     slp_swarm = SLP()
     slp_swarm.solve_swarm(data=data.iloc[:, 1:5])
     slp_swarm.validate()
