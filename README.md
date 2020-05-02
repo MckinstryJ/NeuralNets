@@ -19,7 +19,12 @@ Report:
     <li>via Iteratively</li>
     <li>via Genetic Algorithm</li>
   </ul>
-  <li>...next...<b>Single Layer Perceptron (SLP)</b></li>
+  <li><b>Single Layer Perceptron (SLP)</b></li>
+  <ul>
+    <li>via Iteratively</li>
+    <li>via Swarm Optimization</li>
+  </ul>
+  <li><b>...next...Multi Layer Perceptron (MLP)</b></li>
   <ul>
     <li>via Backpropagation</li>
     <li>via Iteratively</li>
