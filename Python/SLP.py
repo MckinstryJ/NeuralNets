@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import random
+import matplotlib.pyplot as plt
 
 
 class SLP(object):
@@ -11,6 +12,7 @@ class SLP(object):
     b = []
     predictors = []
     response = []
+    max_value = 0
     test_train_ratio = .8
 
     def __init__(self):
@@ -29,7 +31,7 @@ class SLP(object):
         errors = []
         for i in range(round(len(self.predictors) * self.test_train_ratio), len(self.predictors)):
             errors.append(self.response[i] - self.predict(self.predictors[i], self.b))
-        print("\n=================== Results ====================\n"
+        print("\n==================================== Results =====================================\n"
               "{}\n"
               "Mean Summed Error (MSE): {}\n"
               "STD of Error: {}".format(self.b,
@@ -50,7 +52,7 @@ class SLP(object):
                 if self.response[i] >= 0.0:
                     true_pos += 1
                 events += 1
-                day_change.append(self.response[i])
+                day_change.append((self.response[i] - .4964) * self.max_value)
         if events == 0:
             success = 0
         else:
@@ -73,6 +75,46 @@ class SLP(object):
               "-------------------------------------".format(success,
                                                              gain,
                                                              loss))
+
+    def solve_backprop(self, data, alpha=5.0):
+        """
+            Solving thru Backpropagation
+
+        :param data: only open, high, low, close fields are used
+        :param alpha: learning rate
+        :return:
+        """
+        self.predictors = data.iloc[:, :].pct_change().values[1:-1]
+        self.response = data.iloc[:, 3].pct_change().values[2:]
+
+        # init layers - Fully Connected (4, 1)
+        self.b = [0 for i in range(len(self.predictors[0]))]
+
+        error = []
+        index, output = 0, 100
+        while index < 100:
+            for i in range(len(self.predictors)):
+                # Forward Pass
+                output = self.predict(self.predictors[i], self.b)
+
+                # print("++++++++++++++++++++++++++++++++++++++")
+                # print("With weights: {}".format(self.b))
+                # print("Predicted: {}".format(output))
+                # print("Actual: {}".format(self.response[i]))
+                error.append(output - self.response[i])
+
+                # Backpropagation
+                for j in range(4):
+                    self.b[j] -= alpha * self.predictors[i][j] * (output * (1 - output)) * .5 * (output - self.response[i])
+            alpha -= .05
+            if alpha < .05:
+                alpha = .01
+            # if index % 100 == 0:
+            #     plt.plot(error)
+            #     plt.show()
+
+            index += 1
+        print(np.average(error))
 
     def solve_iteratively(self, data, a=1.0):
         """
@@ -135,14 +177,20 @@ if __name__ == "__main__":
     data = pd.read_csv("../../GOOG.csv", header=0)
     data = data.iloc[:, 1:]
 
+    # Solving by Backprop
+    slp_back = SLP()
+    slp_back.solve_backprop(data=data.iloc[:, 1:5])
+    slp_back.validate()
+    slp_back.gain_loss()
+
     # Solving by Iteration
-    slp_iter = SLP()
-    slp_iter.solve_iteratively(data=data.iloc[:, 1:5])
-    slp_iter.validate()
-    slp_iter.gain_loss()
+    # slp_iter = SLP()
+    # slp_iter.solve_iteratively(data=data.iloc[:, 1:5])
+    # slp_iter.validate()
+    # slp_iter.gain_loss()
 
     # Solving by Swarm Optimization
-    slp_swarm = SLP()
-    slp_swarm.solve_swarm(data=data.iloc[:, 1:5])
-    slp_swarm.validate()
-    slp_swarm.gain_loss()
+    # slp_swarm = SLP()
+    # slp_swarm.solve_swarm(data=data.iloc[:, 1:5])
+    # slp_swarm.validate()
+    # slp_swarm.gain_loss()
