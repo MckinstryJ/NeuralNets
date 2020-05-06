@@ -21,6 +21,7 @@ Report:
   </ul>
   <li><b>Single Layer Perceptron (SLP)</b></li>
   <ul>
+    <li>via Backpropagation</li>
     <li>via Iteratively</li>
     <li>via Swarm Optimization</li>
   </ul>
