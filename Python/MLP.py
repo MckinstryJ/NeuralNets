@@ -13,11 +13,10 @@ class MLP(object):
     layer1a = []
     layer1b = []
     layer2 = []
-    agents = None
     test_train_ratio = .8
 
-    def __init__(self, agents=1):
-        self.agents = agents
+    def __init__(self):
+        pass
 
     def predict(self, p, agent):
         target = np.dot(p, agent)
