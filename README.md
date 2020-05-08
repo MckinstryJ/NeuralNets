@@ -25,10 +25,12 @@ Report:
     <li>via Iteratively</li>
     <li>via Swarm Optimization</li>
   </ul>
-  <li><b>...next...Multi Layer Perceptron (MLP)</b></li>
+  <li><b>Multi Layer Perceptron (MLP)</b></li>
   <ul>
     <li>via Backpropagation</li>
-    <li>via Iteratively</li>
-    <li>via Swarm Optimization</li>
+  </ul>
+  <li><b>...next...Radis Basis Network (RBN)</b></li>
+  <ul>
+    <li>via Backpropagation</li>
   </ul>
 </ol>
