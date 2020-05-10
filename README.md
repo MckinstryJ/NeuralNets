@@ -29,8 +29,12 @@ Report:
   <ul>
     <li>via Backpropagation</li>
   </ul>
-  <li><b>...next...Radial Basis Network (RBN)</b></li>
+  <li><b>Radial Basis Network (RBN)</b></li>
   <ul>
     <li>via Backpropagation</li>
+  </ul>
+  <li><b>...next... Auto Encoder (AE)</b></li>
+  <ul>
+    <li>via ???</li>
   </ul>
 </ol>
