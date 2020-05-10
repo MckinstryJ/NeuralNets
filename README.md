@@ -29,7 +29,7 @@ Report:
   <ul>
     <li>via Backpropagation</li>
   </ul>
-  <li><b>...next...Radis Basis Network (RBN)</b></li>
+  <li><b>...next...Radial Basis Network (RBN)</b></li>
   <ul>
     <li>via Backpropagation</li>
   </ul>
