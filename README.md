@@ -33,8 +33,12 @@ Report:
   <ul>
     <li>via Backpropagation</li>
   </ul>
-  <li><b>...next... Auto Encoder (AE)</b></li>
+  <li><b>Auto Encoder (AE)</b></li>
   <ul>
-    <li>via ???</li>
+    <li>via Keras</li>
+  </ul>
+  <li><b>...next...Deep Auto Encoder (AE)</b></li>
+  <ul>
+    <li>via Keras</li>
   </ul>
 </ol>
